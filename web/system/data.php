@@ -15,7 +15,7 @@
 	/* *******************************************************************************************************/
 	function get_db_connection()
 	{
-    $db = mysqli_connect('localhost', 'root', '', 'forum');
+    $db = mysqli_connect('', '', '', '');
     if (mysqli_connect_error()) {
         die('Verbindungsfehler (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
     }
@@ -48,7 +48,7 @@
 		return get_result($sql);
 	}
 
-	
+
 	/* *********************************************************
 	/* Register
 	/* ****************************************************** */
@@ -58,7 +58,7 @@
 		return get_result($sql);
 	}
 
-	
+
 	/* *********************************************************
 	/* Fragen
 	/* ****************************************************** */
@@ -107,7 +107,3 @@
     $sql = "DELETE FROM threads WHERE thread_id=$thread_id;";
 		return get_result($sql);
 	}
-	
-	
-	
-	
